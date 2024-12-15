@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapnil's Portfolio</title>
+    <style>
+        /* General Styles */
+        #header {
+            background: #343A40;
+            color: white;
+            padding: 10px;
+        }
+
+        #header a {
+            text-decoration: none;
+            font-family: Verdana, sans-serif;
+            font-size: 18px;
+            color: white;
+            padding: 8px;
+        }
+
+        #header a:hover {
+            color: #FFD700;
+            /* Highlight color on hover */
+        }
+
+        #header .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #header .menu-item {
+            margin: 5px 10px;
+            text-align: center;
+        }
+
+        #header .logo {
+            font-family: "Comic Sans MS", cursive;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: auto;
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            #header .menu {
+                flex-direction: column;
+            }
+
+            #header .menu-item {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #header a {
+                font-size: 16px;
+            }
+
+            #header .logo {
+                font-size: 20px;
+            }
+        }
+        
+        /* footer1 */
+        #footer {
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    /* Footer Links */
+    #footer .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #footer .footer-links li {
+        font-family: Verdana, sans-serif;
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    #footer .footer-links li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    #footer .footer-links li a:hover {
+        color: #FFD700; /* Highlight on hover */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        #footer .footer-links li {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #footer .footer-links li {
+            font-size: 12px;
+        }
+    }
+    /* About Section */
+    #about {
+        background-color: black;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    #about h1 {
+        font-family: Verdana, sans-serif;
+        font-size: 3rem;
+        color: #4CAF50;
+        margin-bottom: 10px;
+    }
+
+    #about .about-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    #about .about-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        flex: 1 1 40%; /* Adjust image size */
+    }
+
+    #about .about-content {
+        font-family: Verdana, sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        text-align: left;
+        color: white;
+        flex: 1 1 50%; /* Adjust content size */
+    }
+
+    #about hr {
+        border: none;
+        height: 2px;
+        background-color: #4CAF50;
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        #about h1 {
+            font-size: 2.5rem;
+        }
+
+        #about .about-container {
+            flex-direction: column;
+        }
+
+        #about .about-content {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #about h1 {
+            font-size: 2rem;
+        }
+
+        #about .about-content {
+            font-size: 0.9rem;
+        }
+    }
+    /* Contact section */
+    #contact {
+        background-color: grey;
+        color: black;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    #contact h1 {
+        font-family: Verdana, sans-serif;
+        font-size: 3rem;
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    #contact .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    #contact .form-container {
+        background-color: #c2c0c3;
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+        border-radius: 8px;
+    }
+
+    #contact .form-container input,
+    #contact .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #contact button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2rem;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #contact button:hover {
+        background-color: #45a049;
+    }
+
+    #contact hr {
+        border: none;
+        height: 2px;
+        background-color: black;
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        #contact h1 {
+            font-size: 2.5rem;
+        }
+
+        #contact .form-container {
+            width: 90%;
+        }
+
+        #contact .form-container input,
+        #contact .form-container textarea,
+        #contact button {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #contact h1 {
+            font-size: 2rem;
+        }
+
+        #contact .form-container {
+            width: 95%;
+        }
+
+        #contact .form-container input,
+        #contact .form-container textarea,
+        #contact button {
+            font-size: 0.9rem;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!--Header(start)-->
+
+
+    <table id="header" border="0" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <div class="menu">
+                    <div class="logo">Swapnil Ahire</div>
+                    <div class="menu-item"><a href="#home">Home</a></div>
+                    <div class="menu-item">|</div>
+                    <div class="menu-item"><a href="#about">About</a></div>
+                    <div class="menu-item">|</div>
+
+                    <div class="menu-item"><a href="#skills">Skills</a></div>
+                    <div class="menu-item">|</div>
+                    <div class="menu-item"><a href="#projects">Projects</a></div>
+                    <div class="menu-item">|</div>
+                    <div class="menu-item"><a href="#achievements">Achievements</a></div>
+                    <div class="menu-item">|</div>
+                    <div class="menu-item"><a href="#contact">Contact</a></div>
+                    <div class="menu-item">|</div>
+                    <div class="menu-item"><a href="SwapnilAhireResume.pdf">Resume Download</a></div>
+                </div>
+                
+            </td>
+        </tr>
+    </table>
+    <!--Header(end)-->
+
+
+
+    <!--Home(start)-->
+
+    <table id="home" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
+        <tr>
+            <td>
+                <table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
+                    <!-- Title Section -->
+                    <tr>
+                        <td height="180" align="center" valign="middle" colspan="2">
+                            <font face="Verdana" size="7" color="black">
+                                Swapnil Ahire
+                            </font>
+                            <br>
+                            <font face="Verdana" size="5" color="#444">
+                                Intern
+                            </font>
+                            <hr color="black" width="90">
+                        </td>
+                    </tr>
+
+                    <!-- Tagline and Image Section -->
+                    <tr>
+                        <td height="10" width="55%" align="left" valign="center">
+                            <font face="Times New Roman" size="5" color="black">
+                                Passionate about building robust Java applications and solving real-world problems
+                                through technology.
+                            </font>
+                        </td>
+
+                        <!-- Image Section -->
+                        <td width="45%" align="center">
+                            <img src="user3.jpg" alt="Profile Photo or Logo" width="50%"
+                                style="border-radius: 50%; border: 2px solid black;">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--Home(end)-->
+
+
+
+    <section id="about">
+        <h1>About Me</h1>
+        <hr>
+        <div class="about-container">
+            <!-- Image Section -->
+            <img src="user1.png" alt="Profile Picture">
+    
+            <!-- Text Content -->
+            <div class="about-content">
+                <p>Thanks for your interest, here is a quick story of me.</p>
+                <hr>
+                <p>Hello! I’m <strong>Swapnil Ahire</strong>, a passionate and dedicated Java developer from Pune, Maharashtra. 
+                I hold a Master of Computer Applications (MCA) degree from the Suryadatta Institute of Management & Mass Communication, graduating with an impressive 78.82%. My educational foundation and practical experience have equipped me with strong programming skills, especially in Java, SQL, and web development.</p>
+                <hr>
+                <p>During my academic journey, I successfully developed dynamic web-based projects, such as a <strong>Cab Booking System</strong> and a <strong>Retail Platform</strong>, where I demonstrated expertise in backend development using Java (Servlets, JSP), database integration with PostgreSQL, and secure user authentication. My skills also extend to frameworks like Spring Boot, Spring MVC, and Hibernate, ensuring efficient and robust application development.</p>
+                <hr>
+                <p>I am proficient in tools like Git, Maven, and IDEs such as IntelliJ IDEA and Eclipse, and I continually strive to enhance my knowledge in modern technologies. As a problem solver, I have earned recognition, such as winning the "Battle With Code" competition during Tech-Fest 2022.</p>
+                <hr>
+                <p>I’m currently looking to contribute to impactful projects and grow as a developer in the ever-evolving tech industry. Feel free to explore my work on GitHub or connect with me on LinkedIn.</p>
+                <hr>
+                <p><strong>Let’s build something amazing together!</strong></p>
+            </div>
+        </div>
+    </section>
+    <!--About Me End-->
+    <!--Skills Section Start-->
+    <table id="skills" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
+        <tr>
+            <td>
+                <table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
+                    <!-- Title -->
+                    <tr>
+                        <td height="180" align="center" valign="middle" colspan="2">
+                            <font face="Verdana" size="7" color="black">
+                                Skills
+                            </font>
+                            <hr color="black" width="90">
+                        </td>
+                    </tr>
+
+                    <!-- Programming Languages -->
+                    <tr>
+                        <td width="50%" align="left" valign="top">
+                            <font face="Verdana" size="5" color="black">
+                                <b>Programming Languages</b>
+                            </font>
+                            <div style="margin-top: 10px;">
+                                <p><img src="java.png" alt="Java" width="30"> Java (Core, J2EE)</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 85%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+
+                                <p><img src="sql.png" alt="SQL" width="30"> SQL</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 80%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Web Development -->
+                        <td width="50%" align="left" valign="top">
+                            <font face="Verdana" size="5" color="black">
+                                <b>Web Development</b>
+                            </font>
+                            <div style="margin-top: 10px;">
+                                <p><img src="css.png" alt="HTML" width="30"> HTML, CSS</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 80%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+
+                                <p><img src="js.webp" alt="JavaScript" width="30"> JavaScript (Basic)</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 65%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+
+                                <p><img src="rest.png" alt="RESTful APIs" width="30"> RESTful APIs and Web Services
+                                </p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 70%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Frameworks -->
+                    <tr>
+                        <td width="50%" align="left" valign="top">
+                            <font face="Verdana" size="5" color="black">
+                                <b>Frameworks</b>
+                            </font>
+                            <div style="margin-top: 10px;">
+                                <p><img src="spring.png" alt="Spring Boot" width="30"> Spring Boot</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 80%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+
+                                <p><img src="hibernate.png" alt="Hibernate" width="30"> Hibernate</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 75%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+
+                                <p><img src="mvc.png" alt="Spring MVC" width="30"> Spring MVC</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 70%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+
+                                <p><img src="ss.png" alt="Spring Security" width="30"> Spring Security
+                                </p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 70%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Tools -->
+                        <td width="50%" align="left" valign="top">
+                            <font face="Verdana" size="5" color="black">
+                                <b>Tools and Development Tools</b>
+                            </font>
+                            <div style="margin-top: 10px;">
+                                <p><img src="pg.png" alt="JDBC" width="30"> JDBC, PostgreSQL, Servlets, JSP</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 75%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+
+                                <p><img src="git.png" alt="Git" width="30"> Git, GitHub</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 85%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+
+                                <p><img src="maven.png" alt="Maven" width="30"> Maven</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 80%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+
+                                <p><img src="ide.png" alt="IDEs" width="30"> IntelliJ IDEA, Eclipse, VSCode</p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 80%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+
+                                <p><img src="mt.png" alt="Manual Testing" width="30"> Manual Testing (Basic)
+                                </p>
+                                <div style="background-color: #ddd; width: 90%; height: 15px; border-radius: 5px;">
+                                    <div
+                                        style="width: 60%; height: 100%; background-color: #4CAF50; border-radius: 5px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--Skills Section End-->
+
+
+    <!--Achievement(start)-->
+    <table id="achievements" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="black">
+        <tr>
+            <td>
+                <table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
+                    <!-- Title -->
+                    <tr>
+                        <td height="180" align="center" valign="middle">
+                            <font face="Verdana" size="7" color="#4CAF50">
+                                Achievements
+                                <hr color="#4CAF50" width="100">
+                            </font>
+                        </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                        <td>
+                            <font face="Verdana" size="4" color="white">
+                                <ul>
+                                    <!-- Full-Stack Java Intern -->
+                                    <li>
+                                        <b>Full-Stack Java Intern at JSpiders</b>
+                                        <ul>
+                                            <li>January 2024 - Present</li>
+                                            <li>Gained hands-on experience in Java development, web application
+                                                development, and debugging real-world applications.</li>
+                                        </ul>
+                                    </li>
+                                    <hr color="black">
+                                    <!-- Battle With Code -->
+                                    <li>
+                                        <b>Battle With Code, Tech-Fest 2022</b>
+                                        <ul>
+                                            <li>Awarded for identifying and resolving bugs in a coding competition
+                                                during the Tech-Fest.</li>
+                                        </ul>
+                                    </li>
+
+                                    <hr color="black">
+                                    <!-- Battle With Code -->
+                                    <li>
+                                        <b>Certificate of Java</b>
+                                        <ul>
+                                            <li>Earned a LinkedIn certification in Java programming, showcasing
+                                                proficiency in Java development.</li>
+                                        </ul>
+                                    </li>
+
+                                    <hr color="black">
+                                </ul>
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--Achievement(end)-->
+
+    <!--Projects(start)-->
+    <table id="projects" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
+        <tr>
+            <td>
+                <table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
+                    <tr>
+                        <td height="180" align="center" valign="middle" colspan="2">
+                            <font face="Verdana" size="7" color="black">
+                                Projects
+                            </font>
+                            <hr color="black" width="90">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="10">
+                            <font face="Times New Roman" size="5" color="black">
+                                <ul>
+                                    <li>
+                                        Web-based Cab Booking System with Admin Management
+
+
+                                        <details>
+                                            <ul>
+                                                <li>Developed a dynamic web-based cab booking platform using Java
+                                                    (Servlets, JSP) for backend development, JDBC for database
+                                                    connectivity,
+                                                    and PostgreSQL as the relational database.
+                                                </li>
+                                                <li> Implemented admin panel features to manage drivers, cars, and
+                                                    booking
+                                                    details.
+                                                </li>
+                                                <li>Designed and integrated user authentication and authorization
+                                                    modules,
+                                                    including secure login and session management.</li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li>
+                                        <hr color="#c2c0c3">
+                                        Web-Based Retail Platform for Product Browsing and Order
+                                        Management
+
+
+                                        <details>
+                                            <ul>
+                                                <li>Developed a web-based retail platform utilizing Java (Servlets, JSP)
+                                                    for
+                                                    backend development, JDBC for database interaction, and PostgreSQL
+                                                    as
+                                                    the database solution.
+                                                </li>
+                                                <li> Built robust features for user profile management and an end-to-end
+                                                    order processing system.
+                                                </li>
+                                                <li>Focused on backend performance optimization and ensured seamless
+                                                    interaction between the application and the database.</li>
+                                            </ul>
+                                        </details>
+
+                                    </li>
+                                    <li>
+                                        <hr color="#c2c0c3">
+                                        Tour & Travel
+
+                                        <details>
+                                            <ul>
+                                                <li>The Tour and Travel Management System is a dynamic web application
+                                                    designed to
+                                                    provide a one-stop solution for booking travel services such as
+                                                    hotels, flights,
+                                                    and trains. It offers a user-friendly interface and efficient
+                                                    backend processes
+                                                    to streamline travel planning for users while incorporating a robust
+                                                    admin
+                                                    module for effective management.</li>
+
+                                    </li>
+                                </ul>
+                                </details>
+                                </ul>
+                                <hr color="#c2c0c3">
+                                <hr color="#c2c0c3">
+                                <hr color="#c2c0c3">
+                                <hr color="#c2c0c3">
+                            </font>
+                        </td>
+
+                        <td width="45%">
+                            <img src="projects.jpg" alt="Project" width="75%">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--Projects(end)-->
+
+
+
+
+   <!-- Contact Start -->
+
+<section id="contact">
+    <h1>Contact</h1>
+    <hr>
+    <div class="contact-container">
+        <!-- Form Section -->
+        <div class="form-container">
+            <form action="#" method="post">
+                <div>
+                    <label for="name" style="font-family: Verdana, sans-serif; font-size: 1.1rem; color: black;">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div>
+                    <label for="email" style="font-family: Verdana, sans-serif; font-size: 1.1rem; color: black;">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div>
+                    <label for="number" style="font-family: Verdana, sans-serif; font-size: 1.1rem; color: black;">Number</label>
+                    <input type="number" id="number" name="number" placeholder="Your Phone Number" required>
+                </div>
+                <div>
+                    <label for="message" style="font-family: Verdana, sans-serif; font-size: 1.1rem; color: black;">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Contact End -->
+
+
+
+   <!--Footer Start-->
+
+
+<div id="footer">
+    <ul class="footer-links">
+        <li><b>LinkedIn</b><a href="https://www.linkedin.com/in/swapnil-ahire-b5250924a/"> ➲</a></li>
+        <li><b>GitHub</b><a href="https://github.com/swapnilahire09"> ➲</a></li>
+        <li><b>HackerRank</b><a href="#"> ➲</a></li>
+        <li><b>Naukari</b><a href="https://www.naukri.com/mnjuser/profile"> ➲</a></li>
+        <li><b>Indeed</b><a href="https://profile.indeed.com/"> ➲</a></li>
+        <li><b>Instagram</b><a href="#"> ➲</a></li>
+    </ul>
+</div>
+<!--Footer End-->
+
+
+
+    <!--Footer2(start)-->
+    <table id="footer1" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="black">
+        <tr>
+            <td>
+                <table border="0" cellpadding="15" cellspacing="0" width="90%" align="center">
+                    <tr>
+                        <td width="80%" valign="top" align="center">
+                            <font face="Verdana" color="white" size="5">
+                                © 2024 Swapnil Ahire. All Rights Reserved.
+                            </font>
+                        </td>
+
+
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--Footer2(end)-->
+
+</body>
+
+</html>
